@@ -1,0 +1,29 @@
+{
+  "name": "uplyo-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for evidence-based website audits: technical SEO/CRO checks, real Core Web Vitals (PageSpeed Insights) and French company registry lookup. Works with any MCP client.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "uplyo-mcp": "dist/index.js"
+  },
+  "keywords": ["mcp", "model-context-protocol", "seo", "audit", "cro", "pagespeed", "core-web-vitals"],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "npm run build && node test/smoke.mjs",
+    "inspect": "npx -y @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
